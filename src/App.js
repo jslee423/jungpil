@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Work from './pages/Work';
+import About from './pages/About';
 import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/work" element={<Work/>} />
+        <Route path="/about" element={<About/>}></Route>
         <Route path="/shop" element={<Work/>} />
         <Route path="/cart" element={<Work/>} />
       </Routes>
