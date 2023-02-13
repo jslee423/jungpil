@@ -1,15 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-
 .nav {
-    background-color: #FCFBF8;
-    color: #1F1F1F;
-    display: flex;
-    font-family: 'Work Sans', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    font-size: 4rem;
     letter-spacing: -0.06em;
-    font-size: 3vw;
-    width: 100%;
     height: 20vh;
-    margin-top: 1vh;
+    width: 100%;
+    padding-top: 1rem;
 }
 
 .nav  a {
@@ -19,11 +15,13 @@
 
 .nav a.active {
     text-decoration: underline;
+    text-decoration-thickness: 3px;
 }
 
 .nav a:hover {
     color: inherit;
     text-decoration: underline;
+    text-decoration-thickness: 3px;
 }
 
 .nav ul {
@@ -31,63 +29,59 @@
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 2.5vw;
-}
-
-.nav-links {
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    padding-right: 1.5vw;
+    gap: 2vw;
 }
 
 .nav-brand {
     width: 50%;
-    padding-left: 1.5vw;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #1F1F1F;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    font-size: 2.8vw;
-    width: 22vw;
-    overflow-y: auto;
-    height: 20vh;
-    line-height: 2.5rem;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    /* color: #FCFBF8; */
-    /* text-decoration: none; */
-    display: block;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    color: #FCFBF8
+    padding-left: 2rem;
 }
 
 #site-title {
     text-decoration: none;
 }
 
+.nav-links {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+.nav-cart {
+    white-space: nowrap;
+}
+
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+} */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark);
+    color: var(--light);
+    z-index: 1;
+    font-size: 4rem;
+    white-space: nowrap;
+    overflow-y: auto;
+    height: 18rem;
+    line-height: 3rem;
+    padding: .2rem;
+    padding-right: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
 ::-webkit-scrollbar {
     width: 3px;
-  }
+}
 
 ::-webkit-scrollbar-thumb {
     background: #FCFBF8;
     border-radius: 10px;
-  }
+}

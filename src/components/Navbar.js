@@ -13,17 +13,14 @@ const Navbar = () => {
                     <div class="dropdown">
                         <NavLink to='/work'>WORK</NavLink>
                         <div class="dropdown-content">
-                            <NavLink to="/project1">Project Title</NavLink>
-                            <NavLink to="project2">Title of Project</NavLink>
-                            <NavLink to="project3">Project Title</NavLink>
-                            <NavLink to="project4">Title of Project</NavLink>
-                            <NavLink to="project5">Project Title</NavLink>
-                            <NavLink to="project6">Title of Project</NavLink>
-                            <NavLink to="project7">Project Title</NavLink>
-                            <NavLink to="project8">Title of Project</NavLink>
-                            <NavLink to="project9">Project Title</NavLink>
-                            <NavLink to="project10">Title of Project</NavLink>
-                            <NavLink to="project11">Project Title</NavLink>
+                            <NavLink to="/project1">Ride Or Die</NavLink>
+                            <NavLink to="/project2">Growlerz</NavLink>
+                            <NavLink to="/project3">Remind Me Later</NavLink>
+                            <NavLink to="/project4">Music Art</NavLink>
+                            <NavLink to="/project1">Ride Or Die</NavLink>
+                            <NavLink to="/project2">Growlerz</NavLink>
+                            <NavLink to="/project3">Remind Me Later</NavLink>
+                            <NavLink to="/project4">Music Art</NavLink>
                         </div>
                     </div>
                 </li>

@@ -1,4 +1,28 @@
 .Work {
-    height: 80vh;
+    /* height: 80vh; */
     width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.project-container {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.project-title {
+    width: 50%;
+}
+
+.project-title h1 {
+    font-size: 3.5rem;
+}
+
+.project-cover {
+    width: 50%;
+}
+
+.project-cover img {
+    object-fit: cover;
+    height: 100%;
 }
