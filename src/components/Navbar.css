@@ -29,7 +29,7 @@
     margin: 0;
     list-style: none;
     display: flex;
-    gap: 2vw;
+    gap: 3rem;
 }
 
 .nav-brand {
@@ -52,11 +52,6 @@
     white-space: nowrap;
 }
 
-/* .dropdown {
-    position: relative;
-    display: inline-block;
-} */
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -67,7 +62,7 @@
     white-space: nowrap;
     overflow-y: auto;
     height: 18rem;
-    line-height: 3rem;
+    line-height: 3.5rem;
     padding: .2rem;
     padding-right: 1rem;
 }
