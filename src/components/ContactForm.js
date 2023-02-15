@@ -8,7 +8,7 @@ const ContactForm = () => {
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const form = useRef();
-    let errMsg = '';
+    // let errMsg = '';
 
     return (
         <div className="ContactForm">
