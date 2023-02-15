@@ -1,0 +1,33 @@
+.ContactForm {
+    color: var(--dark);
+}
+
+.ContactForm h1 {
+    font-size: 4rem;
+}
+
+.ContactForm p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+
+#sendBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 4rem;
+    color: var(--dark);
+}
+
+#emailForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#emailForm input[type=text] {
+    border: none;
+    background-color: #EFEFF0;;
+}
+
+#emailForm input[type=text]::placeholder {
+    color: #D9D9D9;
+}
