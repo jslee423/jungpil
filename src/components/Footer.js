@@ -1,6 +1,6 @@
 import squid from '../img/squid.png';
 import { NavLink } from 'react-router-dom';
-import './Footer.css';
+import './Footer.scss';
 
 const Footer = () => {
   return (
