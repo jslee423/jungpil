@@ -9,6 +9,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     display: flex;
+    margin-bottom: 2rem;
 }
 
 .about-col {
@@ -20,6 +21,7 @@
     width: 50%;
     font-size: 1.5rem;
     line-height: 1.8rem;
+    letter-spacing: -0.04em;
 }
 
 .bio-social {
@@ -36,7 +38,7 @@
         text-decoration: none;
         color: var(--light);
 
-        :hover {
+        &:hover {
             color: var(--light);
             text-decoration: underline;
             text-decoration-thickness: 3px;

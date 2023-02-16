@@ -26,6 +26,4 @@ body {
   min-height: 100vh;
   width: 100vw;
   background-color: var(--light);
-  display: flex;
-  flex-flow: column;
 }
