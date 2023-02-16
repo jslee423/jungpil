@@ -12,49 +12,51 @@ const ContactForm = () => {
 
     return (
         <div className="ContactForm">
-            <h1>Get in touch</h1>
-            <p>For inquires about creative services,<br/>consultations and/or art commission.</p>
-            {/* <form ref={form} onSubmit={sendEmail} id="emailForm"> */}
-            <form ref={form} id="emailForm">
-                <div className="nameRow">
+            <div className="form-container">
+                <h1>Get in touch</h1>
+                <p>For inquires about creative services,<br/>consultations and/or art commission.</p>
+                {/* <form ref={form} onSubmit={sendEmail} id="emailForm"> */}
+                <form ref={form} id="emailForm">
+                    <div className="nameRow">
+                        <input
+                            type="text"
+                            name="first_name"
+                            value={firstName}
+                            onChange={(event) => setFirstName(event.target.value)}
+                            placeholder="First"
+                        />
+                        <input
+                            type="text"
+                            name="last_name"
+                            value={lastName}
+                            onChange={(event) => setLastName(event.target.value)}
+                            placeholder="Last"
+                        />
+                    </div>
                     <input
                         type="text"
-                        name="first_name"
-                        value={firstName}
-                        onChange={(event) => setFirstName(event.target.value)}
-                        placeholder="First"
+                        name="email"
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        placeholder="Email"
                     />
                     <input
                         type="text"
-                        name="last_name"
-                        value={lastName}
-                        onChange={(event) => setLastName(event.target.value)}
-                        placeholder="Last"
+                        name="subject"
+                        value={subject}
+                        onChange={(event) => setSubject(event.target.value)}
+                        placeholder="Subject"
                     />
-                </div>
-                <input
-                    type="text"
-                    name="email"
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                    placeholder="Email"
-                />
-                <input
-                    type="text"
-                    name="subject"
-                    value={subject}
-                    onChange={(event) => setSubject(event.target.value)}
-                    placeholder="Subject"
-                />
-                <div className="sendRow"></div>
-                <textarea
-                    name="message"
-                    rows='10'
-                    value={message}
-                    onChange={(event) => setMessage(event.target.value)}
-                    placeholder="Message"
-                />
-            </form>
+                    <div className="sendRow"></div>
+                    <textarea
+                        name="message"
+                        rows='10'
+                        value={message}
+                        onChange={(event) => setMessage(event.target.value)}
+                        placeholder="Message"
+                    />
+                </form>
+            </div>
             <div className="button-container">
                 <input id="sendBtn" for="emailForm" type="submit" value="SEND &#62;"/>
             </div>
