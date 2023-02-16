@@ -1,5 +1,5 @@
 import { useState, useRef } from "react"
-import './ContactForm.css';
+import './ContactForm.scss';
 
 const ContactForm = () => {
     const [firstName, setFirstName] = useState('');
@@ -13,7 +13,7 @@ const ContactForm = () => {
     return (
         <div className="ContactForm">
             <h1>Get in touch</h1>
-            <p>For inquires about creative services,<br/>consultations and/or art commisions.</p>
+            <p>For inquires about creative services,<br/>consultations and/or art commission.</p>
             {/* <form ref={form} onSubmit={sendEmail} id="emailForm"> */}
             <form ref={form} id="emailForm">
                 <div className="nameRow">
@@ -49,7 +49,7 @@ const ContactForm = () => {
                 <div className="sendRow"></div>
                 <textarea
                     name="message"
-                    rows='5'
+                    rows='10'
                     value={message}
                     onChange={(event) => setMessage(event.target.value)}
                     placeholder="Message"
