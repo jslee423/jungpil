@@ -58,7 +58,7 @@ const ContactForm = () => {
                 </form>
             </div>
             <div className="button-container">
-                <input id="sendBtn" for="emailForm" type="submit" value="SEND &#62;"/>
+                <input id="sendBtn" type="submit" value="SEND &#62;"/>
             </div>
         </div>
     )

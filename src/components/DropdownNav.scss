@@ -1,0 +1,42 @@
+#DropdownNav {
+    background-color: var(--light);
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    padding-left: 2rem;
+    // padding-top: .5rem;
+    font-family: 'Work Sans', sans-serif;
+    
+    a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-size: 2.5rem;
+        letter-spacing: -0.06em;
+        color: var(--dark);
+        
+        // &:hover {
+        //     background-color: #ddd;
+        //     color: black;
+        // }
+    }
+}
+
+.nav-breadcrumb {
+    display: flex;
+    gap: 1rem;
+
+    p {
+        font-size: 2.3rem;
+        margin: 0;
+    }
+
+    .nav-crumb {
+        display: flex;
+        gap: 1rem;
+    }
+}

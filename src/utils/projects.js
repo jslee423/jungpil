@@ -5,15 +5,18 @@ import growlerzImg from '../img/lny_tiger.gif';
 const projects = [
     {
         name: "Ride Or Die",
-        img: rideordieImg
+        img: rideordieImg,
+        path: "ride_or_die"
     },
     {
         name: "Kult",
-        img: kultImg
+        img: kultImg,
+        path: "kult"
     },
     {
         name: "Growlerz",
-        img: growlerzImg
+        img: growlerzImg,
+        path: "growlerz"
     }
 ];
 

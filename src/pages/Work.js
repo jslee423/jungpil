@@ -1,14 +1,17 @@
 import projects from '../utils/projects';
+import { NavLink } from 'react-router-dom';
 import './Work.css';
 
 const Work = () => {
     return (
         <div className='Work'>
-            {projects.map(project => {
+            {projects.map((project, index) => {
                 return (
-                    <div className='project-container'>
+                    <div className='project-container' key={index}>
                         <div className='project-title'>
-                            <h1>{project.name} &#62;</h1>
+                            <NavLink to={project.path}>
+                                <h1>{project.name} &#62;</h1>
+                            </NavLink>
                         </div>
                         <div className='project-cover'>
                             <img className="d-block w-100" src={project.img} alt="" />
