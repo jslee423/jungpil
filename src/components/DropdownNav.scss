@@ -1,12 +1,14 @@
+@use '../utils/variables';
+
 #DropdownNav {
-    background-color: var(--light);
+    background-color: variables.$light-color;
+    color: variables.$dark-color;
     position: fixed;
     top: -100px;
     width: 100%;
     display: block;
     transition: top 0.3s;
     padding-left: 2rem;
-    // padding-top: .5rem;
     font-family: 'Work Sans', sans-serif;
     
     a {
@@ -17,12 +19,7 @@
         text-decoration: none;
         font-size: 2.5rem;
         letter-spacing: -0.06em;
-        color: var(--dark);
-        
-        // &:hover {
-        //     background-color: #ddd;
-        //     color: black;
-        // }
+        color: inherit;
     }
 }
 
@@ -38,5 +35,12 @@
     .nav-crumb {
         display: flex;
         gap: 1rem;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #DropdownNav {
+        display: none;
     }
 }
