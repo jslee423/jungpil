@@ -1,6 +1,6 @@
-import projects from '../utils/projects';
+import { projects } from '../utils/projects';
 import { NavLink } from 'react-router-dom';
-import './Work.css';
+import './Work.scss';
 
 const Work = () => {
     return (
@@ -20,7 +20,7 @@ const Work = () => {
                 )
             })}
         </div>
-    )
-}
+    );
+};
 
-export default Work
+export default Work;

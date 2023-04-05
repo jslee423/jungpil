@@ -1,0 +1,53 @@
+@use '../utils/variables';
+
+.Work {
+    color: variables.$dark-color;
+    padding: 2rem;
+
+    h1 {
+        color: inherit;
+        font-size: 4rem;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-thickness: .3rem;
+        }
+    }
+}
+
+.project-container {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.project-title, .project-cover {
+    width: 50%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Work {
+        padding: 0;
+        
+        h1 {
+            font-size: 3rem;
+        }
+    }
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project-title, .project-cover {
+        width: 100%;
+    }
+
+    .project-title {
+        padding-left: 2rem;
+    }
+}
