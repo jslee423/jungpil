@@ -1,23 +1,36 @@
-import rideordieImg from '../img/rod_title.jpg';
-import kultImg from '../img/sc_5.jpg';
-import growlerzImg from '../img/lny_tiger.gif';
+import growlerz from '../img/growlerz.gif';
+import kult from '../img/kult.jpg';
+import rod from '../img/rod_title.jpg';
 
-const projects = [
+export const headerImages = [
+    {
+        name: 'growlerz',
+        img: growlerz
+    },
+    {
+        name: 'kult',
+        img: kult
+    },
+    {
+        name: 'rod',
+        img: rod
+    }
+];
+
+export const projects = [
     {
         name: "Ride Or Die",
-        img: rideordieImg,
-        path: "ride_or_die"
+        img: rod,
+        path: "Ride_Or_Die"
     },
     {
         name: "Kult",
-        img: kultImg,
+        img: kult,
         path: "kult"
     },
     {
         name: "Growlerz",
-        img: growlerzImg,
+        img: growlerz,
         path: "growlerz"
     }
 ];
-
-export default projects;
