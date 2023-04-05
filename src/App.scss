@@ -1,0 +1,29 @@
+@use './utils/variables';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+html {
+  font-size: 10px;
+}
+
+.App {
+  background-color: variables.$light-color;
+  font-family: 'Work Sans', sans-serif;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
