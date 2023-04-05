@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from "react-router-dom";
 import './Breadcrumb.scss';
 
 const Breadcrumb = () => {
@@ -15,24 +15,23 @@ const Breadcrumb = () => {
                             </div>
                         )
                     } else if (index + 1 === currentPathArray.length) {
-                        console.log(location)
                         return (
                             <div key ={index} className='nav-crumb'>
                                 <p>&#62;</p>
-                                <NavLink to={location.pathname} element="">{path.replaceAll('_', ' ').toUpperCase()}</NavLink>
+                                <NavLink to={location.pathname} element="">{path.replaceAll('_', ' ')}</NavLink>
                             </div>
                         )
                     } else {
                         return (
                             <div key={index} className='nav-crumb'>
                                 <p>&#62;</p>
-                                <NavLink to={`/${path}`} element="">{path.replaceAll('_', ' ').toUpperCase()}</NavLink>
+                                <NavLink to={`/${path}`} element="">{path.replaceAll('_', ' ')}</NavLink>
                             </div>
                         )
                     }
                 })}
         </div>
     )
-}
+};
 
-export default Breadcrumb
+export default Breadcrumb;
