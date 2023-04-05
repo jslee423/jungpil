@@ -1,54 +1,27 @@
-import { Carousel } from "react-bootstrap"
-import img1 from '../img/sc_5.jpg'
-import img2 from '../img/lny_tiger.gif';
-import img3 from '../img/rod_title.jpg';
-import './Home.css';
+import { Carousel } from "react-bootstrap";
+import { headerImages } from '../utils/projects';
+import './Home.scss';
 
 const Home = () => {
-  return (
-    <div className="Home">
-        <div className="carousel-container">
-
-            <Carousel controls={false} touch pause={false} interval={4000}>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img1}
-                    alt="First slide"
-                    />
-                    <Carousel.Caption>
-                    {/* <h3></h3>
-                    <p></p> */}
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img2}
-                    alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                    {/* <h3></h3>
-                    <p></p> */}
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={img3}
-                    alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                    {/* <h3></h3>
-                    <p></p> */}
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+    return (
+        <div className="Home">
+            <div className="carousel-container">
+                <Carousel controls={false} touch pause={false} interval={4000}>
+                    {headerImages.map((image, index) => {
+                        return (
+                            <Carousel.Item key={index}>
+                                <img
+                                    className="d-block w-100"
+                                    src={image.img}
+                                    alt={image.name}
+                                />
+                            </Carousel.Item>
+                        )
+                    })}
+                </Carousel>
+            </div>
         </div>
-    </div>
-  )
-}
+    );
+};
 
-export default Home
+export default Home;
