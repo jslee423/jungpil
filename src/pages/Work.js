@@ -14,7 +14,9 @@ const Work = () => {
                             </NavLink>
                         </div>
                         <div className='project-cover'>
-                            <img className="d-block w-100" src={project.img} alt="" />
+                            <NavLink to={project.path}>
+                                <img className="d-block w-100" src={project.img} alt="" />
+                            </NavLink>
                         </div>
                     </div>
                 )
