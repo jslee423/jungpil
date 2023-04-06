@@ -49,6 +49,7 @@
 #site-title {
     text-decoration: none;
     color: inherit;
+    height: 5rem;
 }
 
 .toggleBtn {
@@ -68,6 +69,11 @@
     line-height: 3.5rem;
     padding: .2rem;
     padding-right: 1rem;
+
+    a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 0.3rem;
+    }
 }
 
 .dropdown:hover .dropdown-content {
@@ -142,6 +148,7 @@
     .nav-brand {
         justify-content: center;
         width: 100%;
+        padding-left: 0;
     }
     
     .nav-links {
