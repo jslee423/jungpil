@@ -26,11 +26,11 @@ export const projects = [
     {
         name: "Kult",
         img: kult,
-        path: "kult"
+        path: "Kult"
     },
     {
         name: "Growlerz",
         img: growlerz,
-        path: "growlerz"
+        path: "Growlerz"
     }
 ];
