@@ -7,10 +7,22 @@ html {
 
 .App {
   background-color: variables.$light-color;
+  color: variables.$dark-color;
   font-family: 'Work Sans', sans-serif;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: variables.$light-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: variables.$dark-color;
+  border-radius: 0.5rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
