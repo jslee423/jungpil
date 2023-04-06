@@ -1,0 +1,13 @@
+@use '../utils/variables';
+
+.Shop {
+    width: 100%;
+    height: 75svh;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    h1 {
+        font-size: 6rem;
+    }
+}
