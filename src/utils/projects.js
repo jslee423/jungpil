@@ -34,3 +34,34 @@ export const projects = [
         path: "Growlerz"
     }
 ];
+
+export const socials = [
+    {
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/'
+    },
+    {
+        name: 'IG',
+        link: 'https://www.instagram.com/'
+    },
+    {
+        name: 'Dribble',
+        link: ''
+    },
+    {
+        name: 'Behance',
+        link: ''
+    },
+    {
+        name: 'Society 6',
+        link: ''
+    },
+    {
+        name: 'Youtube',
+        link: ''
+    },
+    {
+        name: 'Twitter',
+        link: ''
+    }
+]
