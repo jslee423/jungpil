@@ -1,12 +1,13 @@
 import squid from '../img/squid.png';
 import { NavLink } from 'react-router-dom';
+import { scrollToTop } from '../utils/global';
 import './Footer.scss';
 
 const Footer = () => {
     return (
         <div className='Footer'>
             <div className='footer-links'>
-                <NavLink to='/'><img src={squid} alt='squid' id='squid' /></NavLink>
+                <NavLink to='/' onClick={() => scrollToTop('instant')}><img src={squid} alt='squid' id='squid' /></NavLink>
                 <NavLink to='/contact' className="foot-link">CONTACT</NavLink>
                 <NavLink to='/client' className="foot-link">CLIENT</NavLink>
                 <NavLink to='/search' className="foot-link">SEARCH</NavLink>

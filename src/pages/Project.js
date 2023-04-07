@@ -1,6 +1,7 @@
 import { projects } from "../utils/projects";
 import Breadcrumb from "../components/Breadcrumb";
 import { NavLink } from "react-router-dom";
+import { scrollToTop } from "../utils/global";
 import './Project.scss';
 
 const Project = (name) => {
@@ -73,14 +74,12 @@ const Project = (name) => {
                 <div className="prev-next" style={prevProj ? { justifyContent: "space-between" } : { justifyContent: "flex-end" }}>
                     {prevProj &&
                         <div className="prev">
-                            <NavLink to={`/work/${prevProj.path}`} className="foot-link">&#60; PREV...</NavLink>
-                            {/* <p>&#60; PREV...</p> */}
+                            <NavLink to={`/work/${prevProj.path}`} className="foot-link" onClick={() => scrollToTop('smooth')}>&#60; PREV...</NavLink>
                         </div>
                     }
                     {nextProj &&
                         <div className="next">
-                            <NavLink to={`/work/${nextProj.path}`} className="foot-link">...NEXT &#62;</NavLink>
-                            {/* <p>...NEXT &#62;</p> */}
+                            <NavLink to={`/work/${nextProj.path}`} className="foot-link" onClick={() => scrollToTop('smooth')}>...NEXT &#62;</NavLink>
                         </div>
                     }
                 </div>

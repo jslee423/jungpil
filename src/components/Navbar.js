@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { projects } from "../utils/projects";
 import squid from '../img/squid.png';
+import { scrollToTop } from "../utils/global";
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -13,9 +14,12 @@ const Navbar = () => {
         if (toggled) {
             navLinks.style= "display:flex";
             navBar.style="min-height:100svh; position:absolute";
+            document.body.style = "overflow: hidden";
+            scrollToTop('instant');
         } else {
             navLinks.style = "display:none";
             navBar.style="min-height: null";
+            document.body.style = "overflow: visible";
         }
     };
 
@@ -36,7 +40,7 @@ const Navbar = () => {
     return (
         <nav className="nav" id='nav'>
             <div className="nav-brand">
-                <NavLink to='/' id='site-title' onClick={() => {setOpen(false); toggleMenu(false)}}>JUNGPIL®</NavLink>
+                <NavLink to='/' id='site-title' onClick={() => {setOpen(false); toggleMenu(false); scrollToTop('instant')}}>JUNGPIL®</NavLink>
             </div>
             <div className="toggleBtn">
                 <Hamburger

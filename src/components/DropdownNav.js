@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import { scrollToTop } from '../utils/global';
 import './DropdownNav.scss';
 
 const DropdownNav = () => {
@@ -23,14 +24,14 @@ const DropdownNav = () => {
                         return (
                             <div key ={index} className='nav-crumb'>
                                 <p>&#62;</p>
-                                <NavLink to={location.pathname} element="">{path.replaceAll('_', ' ')}</NavLink>
+                                <NavLink to={location.pathname} element="" onClick={() => scrollToTop('smooth')}>{path.replaceAll('_', ' ')}</NavLink>
                             </div>
                         )
                     } else {
                         return (
                             <div key={index} className='nav-crumb'>
                                 <p>&#62;</p>
-                                <NavLink to={path} element="">{path.replaceAll('_', ' ').toUpperCase()}</NavLink>
+                                <NavLink to={path} element="" onClick={() => scrollToTop('smooth')}>{path.replaceAll('_', ' ').toUpperCase()}</NavLink>
                             </div>
                         )
                     }
