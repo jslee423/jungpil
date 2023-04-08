@@ -2,15 +2,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 10rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 2rem;
     letter-spacing: -0.06rem;
-    height: 25svh;
+    min-height: 25svh;
+    gap: 10rem;
 
     #squid {
         object-fit: cover;
         width: 4rem;
+        // padding-top: 10rem;
     }
 
     .foot-link {
@@ -53,6 +56,8 @@
         height: 20svh;
         justify-content: flex-end;
         align-items: center;
+        gap: 0;
+        margin-top: 5rem;
 
         .foot-link {
             display: none;
