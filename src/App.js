@@ -20,7 +20,7 @@ function App() {
 
     const ProtectedRoute = ({ children }) => {
         if (!authUser) {
-            return <Navigate to='login' />;
+            return <Navigate to='/admin/login' />;
         }
 
         return children;
