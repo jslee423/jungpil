@@ -1,5 +1,5 @@
 import { onAuthStateChanged, signOut as authSignOut } from 'firebase/auth';
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { auth } from './firebase';
 
 const AuthUserContext = createContext({
@@ -16,32 +16,32 @@ export default function useFirebaseAuth() {
         setIsLoading(false);
     };
 
-    const authStateChanged = async (user) => {
-        console.log('auth user', user);
-        console.log('isLoading', isLoading);
-        setIsLoading(true);
-        if (!user) {
-            clear();
-            return;
-        }
-        if (user.email !== 'jplee219@gmail.com') {
-            clear();
-            signOut();
-            return;
-        }
-        setAuthUser({
-            uid: user.uid,
-            email: user.email
-        });
-        setIsLoading(false);
-    };
-
-    const signOut = () => authSignOut(auth).then(clear);
-
+    
+    const signOut = useCallback(() => authSignOut(auth).then(clear), []);
+    
     useEffect(() => {
+        const authStateChanged = async (user) => {
+            console.log('auth user', user);
+            console.log('isLoading', isLoading);
+            setIsLoading(true);
+            if (!user) {
+                clear();
+                return;
+            }
+            if (user.email !== 'jplee219@gmail.com') {
+                clear();
+                signOut();
+                return;
+            }
+            setAuthUser({
+                uid: user.uid,
+                email: user.email
+            });
+            setIsLoading(false);
+        };
         const unsubscribe = onAuthStateChanged(auth, authStateChanged);
         return () => unsubscribe();
-    }, []);
+    }, [isLoading, signOut]);
 
     return {
         authUser,

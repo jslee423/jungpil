@@ -26,7 +26,7 @@ const Login = () => {
         if (!isLoading && authUser) {
             navigate('/admin');
         }
-    }, [authUser, isLoading]);
+    }, [authUser, isLoading, navigate]);
 
     return (
         (isLoading || (!isLoading && !!authUser)) ?
