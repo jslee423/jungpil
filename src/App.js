@@ -18,9 +18,10 @@ function App() {
     const location = useLocation();
     const { authUser } = useAuth();
 
+    console.log('authuser app', authUser)
     const ProtectedRoute = ({ children }) => {
         if (!authUser) {
-            return <Navigate to='/admin/login' />;
+            return <Navigate to='login' />;
         }
 
         return children;
