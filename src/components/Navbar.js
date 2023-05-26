@@ -4,10 +4,14 @@ import { Squeeze as Hamburger } from 'hamburger-react';
 import { projects } from "../utils/projects";
 import squid from '../img/squid.png';
 import { scrollToTop } from "../utils/global";
+import { useAuth } from "../firebase/auth";
+import { Button } from "@mui/material";
 import './Navbar.scss';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false)
+    const { authUser, signOut } = useAuth();
+
     const toggleMenu = (toggled) => {
         const navLinks = document.getElementById('toggleMenu');
         const navBar = document.getElementById('nav');
@@ -40,7 +44,9 @@ const Navbar = () => {
     return (
         <nav className="nav" id='nav'>
             <div className="nav-brand">
-                <NavLink to='/' id='site-title' onClick={() => {setOpen(false); toggleMenu(false); scrollToTop('instant')}}>JUNGPIL®</NavLink>
+                <NavLink to='/' id='site-title' onClick={() => {setOpen(false); toggleMenu(false); scrollToTop('instant')}}>
+                    JUNGPIL{authUser ? <NavLink to='/admin' id='admin-title'>®</NavLink> : '®'}
+                </NavLink>
             </div>
             <div className="toggleBtn">
                 <Hamburger
@@ -132,6 +138,11 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
+            {authUser && 
+                <div className="logoutContainer">
+                    <Button id="logoutButton" variant="text" onClick={signOut}>LOGOUT</Button>
+                </div>
+            }
         </nav>
     );
 };
