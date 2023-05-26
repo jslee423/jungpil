@@ -45,8 +45,9 @@ const Navbar = () => {
         <nav className="nav" id='nav'>
             <div className="nav-brand">
                 <NavLink to='/' id='site-title' onClick={() => {setOpen(false); toggleMenu(false); scrollToTop('instant')}}>
-                    JUNGPIL{authUser ? <NavLink to='/admin' id='admin-title'>®</NavLink> : '®'}
+                    JUNGPIL
                 </NavLink>
+                {authUser ? <NavLink to='/admin' id='admin-title'>®</NavLink> : '®'}
             </div>
             <div className="toggleBtn">
                 <Hamburger
