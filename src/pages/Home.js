@@ -11,15 +11,15 @@ const Home = () => {
                     {projects.map((project, index) => {
                         console.log(project.name)
                         return (
-                            <Carousel.Item>
-                                    <NavLink to={`/work/${project.path}`} key={index}>
-                                        <img
-                                            className="d-block w-100"
-                                            src={project.img}
-                                            alt={project.name}
-                                        />
-                                    </NavLink>
-                                </Carousel.Item>
+                            <Carousel.Item key={index}>
+                                <NavLink to={`/work/${project.path}`} key={index}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={project.img}
+                                        alt={project.name}
+                                    />
+                                </NavLink>
+                            </Carousel.Item>
                         )
                     })}
                 </Carousel>
