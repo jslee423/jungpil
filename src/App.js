@@ -18,15 +18,14 @@ function App() {
     const location = useLocation();
     const { authUser } = useAuth();
 
-    const ProtectedRoute = ({children}) => {
-        console.log('authuser app', authUser);
+    const ProtectedRoute = ({ children }) => {
         if (!authUser) {
             return <Navigate to='login' />;
         }
 
         return children;
-    }
-    
+    };
+
     return (
         <div className="App">
             <DropdownNav />
