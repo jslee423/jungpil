@@ -1,0 +1,51 @@
+@use '../utils/variables';
+
+.login {
+    padding: 0 2rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .login-title {
+        text-align: center;
+        font-size: 4rem;
+        letter-spacing: -0.2rem;
+    }
+
+    .mdl-button--raised.mdl-button--colored {
+        background-color: variables.$dark-color;
+        font-family: 'Work Sans';
+        font-size: 1.5rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 4rem;
+
+        input {
+            border: none;
+            background-color: variables.$dark-color;
+            font-size: 2rem;
+            padding: 0.2rem 0.5rem;
+            text-align: center;
+            color: variables.$light-color;
+            
+            &::placeholder {
+                text-transform: uppercase;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: variables.$dark-color;
+            color: variables.$light-color;
+            font-size: 2.5rem;
+            padding: .2rem 2rem;
+            margin-top: 2rem;
+        }
+    }
+}
