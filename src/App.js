@@ -21,7 +21,7 @@ function App() {
     console.log('authuser app', authUser)
     const ProtectedRoute = ({ children }) => {
         if (!authUser) {
-            return <Navigate to='login' />;
+            return <Navigate to='/login' />;
         }
 
         return children;
@@ -48,8 +48,8 @@ function App() {
                             <Admin />
                         </ProtectedRoute>
                     }></Route>
-                    <Route path='login' element={<Login />}></Route>
                 </Route>
+                <Route path='/login' element={<Login />}></Route>
             </Routes>
             {location.pathname === '/' ? "" : <Footer />}
         </div>
