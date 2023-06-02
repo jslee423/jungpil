@@ -21,8 +21,6 @@ export default function useFirebaseAuth() {
     
     useEffect(() => {
         const authStateChanged = async (user) => {
-            console.log('auth user', user);
-            console.log('isLoading', isLoading);
             setIsLoading(true);
             if (!user) {
                 clear();
