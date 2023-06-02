@@ -18,7 +18,6 @@ function App() {
     const location = useLocation();
     const { authUser } = useAuth();
 
-    console.log('authuser app', authUser)
     const ProtectedRoute = ({ children }) => {
         if (!authUser) {
             return <Navigate to='login' />;
